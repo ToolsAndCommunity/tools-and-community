@@ -2,7 +2,7 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata = {
-  title: "Tools & Community",
+  title: "Gameplate",
   description: "Modern tools, gaming resources and community platform",
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({
               href="/"
               className="text-lg font-black tracking-widest text-white justify-self-start hover:opacity-80 transition"
             >
-              TOOLS <span className="text-purple-400">&</span> COMMUNITY
+              GAMEPLATE
             </Link>
 
             {/* Navigation */}
@@ -83,7 +83,7 @@ export default function RootLayout({
               {/* About */}
               <div>
                 <h5 className="text-sm font-black tracking-widest text-white">
-                  TOOLS <span className="text-purple-400">&</span> COMMUNITY
+                  GAMEPLATE
                 </h5>
 
                 <p className="text-sm text-slate-500 leading-relaxed mt-4 max-w-md">
@@ -169,7 +169,7 @@ export default function RootLayout({
             <div className="border-t border-slate-900 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
 
               <p className="text-xs text-slate-600">
-                © 2026 Tools & Community. All rights reserved.
+                © 2026 Gameplate. All rights reserved.
               </p>
 
               <p className="text-xs text-slate-700">
