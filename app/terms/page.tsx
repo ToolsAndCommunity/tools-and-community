@@ -32,13 +32,13 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Welcome to Tools & Community. By accessing or using this
+              Welcome to Gameplate. By accessing or using this
               website, you agree to these Terms of Service. If you do not
               agree with these terms, please do not use the website.
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community provides software tools, gaming resources,
+              Gameplate provides software tools, gaming resources,
               gameplay tactics, community-related content, and other
               informational materials.
             </p>
@@ -51,7 +51,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              You may use Tools & Community for lawful purposes and in
+              You may use Gameplate for lawful purposes and in
               accordance with these Terms of Service.
             </p>
 
@@ -69,7 +69,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community may provide downloadable software, utilities,
+              Gameplate may provide downloadable software, utilities,
               or other digital resources through the website.
             </p>
 
@@ -81,7 +81,7 @@ export default function TermsOfServicePage() {
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community does not guarantee that every tool will work
+              Gameplate does not guarantee that every tool will work
               with every device, operating system, game version, or third-party
               service.
             </p>
@@ -95,7 +95,7 @@ export default function TermsOfServicePage() {
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
               Gaming information, strategies, tactics, guides, and other
-              gameplay-related content provided on Tools & Community are
+              gameplay-related content provided on Gameplate are
               intended for informational and entertainment purposes.
             </p>
 
@@ -106,7 +106,7 @@ export default function TermsOfServicePage() {
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community does not guarantee any particular gameplay
+              Gameplate does not guarantee any particular gameplay
               result, ranking, reward, performance, or outcome from following
               information published on the website.
             </p>
@@ -119,13 +119,13 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community may reference third-party games, companies,
+              Gameplate may reference third-party games, companies,
               platforms, or services. These third parties are independent
-              from Tools & Community unless explicitly stated otherwise.
+              from Gameplate unless explicitly stated otherwise.
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community is not responsible for changes, restrictions,
+              Gameplate is not responsible for changes, restrictions,
               bans, account actions, service interruptions, or other decisions
               made by third-party game developers, publishers, platforms, or
               service providers.
@@ -140,8 +140,8 @@ export default function TermsOfServicePage() {
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
               Unless otherwise stated, the original website design, branding,
-              text, graphics, layout, and other content created for Tools &
-              Community belong to their respective rights holders.
+              text, graphics, layout, and other content created for Gameplate
+              belong to their respective rights holders.
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
@@ -152,8 +152,8 @@ export default function TermsOfServicePage() {
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
               Nothing on this website should be interpreted as transferring
-              ownership of third-party intellectual property to Tools &
-              Community or its users.
+              ownership of third-party intellectual property to Gameplate or
+              its users.
             </p>
           </section>
 
@@ -169,7 +169,7 @@ export default function TermsOfServicePage() {
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community does not control third-party websites or
+              Gameplate does not control third-party websites or
               services and cannot guarantee their availability, security,
               accuracy, or content. You access third-party resources at your
               own discretion.
@@ -183,7 +183,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community may display advertisements from third-party
+              Gameplate may display advertisements from third-party
               advertising providers, including Google advertising services.
             </p>
 
@@ -217,7 +217,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community is provided on an "as is" and "as available"
+              Gameplate is provided on an "as is" and "as available"
               basis to the extent permitted by applicable law.
             </p>
 
@@ -236,7 +236,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              To the extent permitted by applicable law, Tools & Community
+              To the extent permitted by applicable law, Gameplate
               shall not be responsible for damages or losses resulting from
               the use of the website, downloaded resources, third-party
               services, or information provided on the website.
@@ -273,7 +273,7 @@ export default function TermsOfServicePage() {
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
               If you have questions regarding these Terms of Service, you can
-              contact Tools & Community by email.
+              contact Gameplate by email.
             </p>
 
             <a
@@ -288,7 +288,7 @@ export default function TermsOfServicePage() {
 
         {/* Footer Note */}
         <div className="text-center text-xs text-slate-600 mt-6">
-          © 2026 Tools & Community. All rights reserved.
+          © 2026 Gameplate. All rights reserved.
         </div>
 
       </div>
