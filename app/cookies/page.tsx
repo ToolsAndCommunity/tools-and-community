@@ -32,7 +32,7 @@ export default function CookiePolicyPage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community may use cookies and similar technologies to
+              Gameplate may use cookies and similar technologies to
               support website functionality and advertising. This Cookie
               Policy explains what cookies are, how they may be used on our
               website, and what choices may be available to you.
@@ -60,7 +60,7 @@ export default function CookiePolicyPage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community may use cookies or similar technologies for
+              Gameplate may use cookies or similar technologies for
               the following purposes:
             </p>
 
@@ -91,7 +91,7 @@ export default function CookiePolicyPage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community may display advertisements provided by
+              Gameplate may display advertisements provided by
               third-party advertising services, including Google advertising
               services.
             </p>
@@ -118,12 +118,12 @@ export default function CookiePolicyPage() {
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
               Some cookies may be placed by third-party services rather than
-              directly by Tools & Community.
+              directly by Gameplate.
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
               These third parties may process information according to their
-              own privacy policies and terms. Tools & Community does not
+              own privacy policies and terms. Gameplate does not
               control third-party cookie technologies or their independent
               data practices.
             </p>
@@ -191,7 +191,7 @@ export default function CookiePolicyPage() {
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
               If you have questions about this Cookie Policy or the use of
-              cookies on Tools & Community, you can contact us by email.
+              cookies on Gameplate, you can contact us by email.
             </p>
 
             <a
@@ -206,7 +206,7 @@ export default function CookiePolicyPage() {
 
         {/* Footer Note */}
         <div className="text-center text-xs text-slate-600 mt-6">
-          © 2026 Tools & Community. All rights reserved.
+          © 2026 Gameplate. All rights reserved.
         </div>
 
       </div>
