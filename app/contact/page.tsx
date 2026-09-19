@@ -16,7 +16,7 @@ export default function ContactPage() {
               </h1>
 
               <p className="text-sm text-slate-400 mt-1">
-                Get in touch with Tools & Community
+                Get in touch with Gameplate
               </p>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function ContactPage() {
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
               If you have a question, suggestion, bug report, or need help
-              regarding Tools & Community, you can contact us by email.
+              regarding Gameplate, you can contact us by email.
             </p>
           </section>
 
@@ -50,10 +50,10 @@ export default function ContactPage() {
                 </p>
 
                 <a
-                  href="mailto:baris2012arabacioglu@gmail.com"
+                  href="mailto:supportgameplate@gmail.com"
                   className="inline-block mt-1 text-sm md:text-base text-purple-400 hover:text-purple-300 font-semibold transition break-all"
                 >
-                  baris2012arabacioglu@gmail.com
+                  supportgameplate@gmail.com
                 </a>
               </div>
 
@@ -108,7 +108,7 @@ export default function ContactPage() {
 
         {/* Footer Note */}
         <div className="text-center text-xs text-slate-600 mt-6">
-          © 2026 Tools & Community. All rights reserved.
+          © 2026 Gameplate. All rights reserved.
         </div>
 
       </div>

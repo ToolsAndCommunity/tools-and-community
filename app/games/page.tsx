@@ -258,7 +258,7 @@ export default function GamesPage() {
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-slate-900 bg-[#02040a]/90 text-slate-400 px-6 py-6 text-center text-xs">
-        © 2026 Tools & Community - Games Module.
+        © 2026 Gameplate - Games Module.
       </footer>
 
     </div>

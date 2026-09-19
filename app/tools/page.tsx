@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 
@@ -9,7 +9,7 @@ export default function ToolsPage() {
       version: "v1.0",
       status: "Active",
       description:
-        "An automation tool designed to simplify repetitive in-game actions through configurable controls and automated routines.",
+        "For PC. An automation tool designed to simplify repetitive in-game actions through configurable controls and automated routines.",
       image:
         "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
       download: "/onegunautofarm.exe",
@@ -19,7 +19,7 @@ export default function ToolsPage() {
       version: "v1.0",
       status: "Active",
       description:
-        "A customizable automation tool with configurable input controls, automation features, and custom profiles for supported applications.",
+        "For PC. A customizable automation tool with configurable input controls, automation features, and custom profiles for supported applications.",
       image:
         "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1000&auto=format&fit=crop",
       download: "/brawlmacro.exe",
@@ -29,7 +29,7 @@ export default function ToolsPage() {
       version: "v1.0",
       status: "Active",
       description:
-        "A web security analysis tool designed to examine publicly accessible web information and provide useful security-related insights.",
+        "For PC. A web security analysis tool designed to examine publicly accessible web information and provide useful security-related insights.",
       image:
         "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1000&auto=format&fit=crop",
       download: "/netsec.exe",
@@ -39,7 +39,7 @@ export default function ToolsPage() {
       version: "v1.0",
       status: "Coming Soon",
       description:
-        "An advanced web security analysis tool designed for authorized security testing and research.",
+        "For PC. An advanced web security analysis tool designed for authorized security testing and research.",
       image:
         "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop",
       download: null,
@@ -116,6 +116,7 @@ export default function ToolsPage() {
         {/* Header */}
         <div className="bg-slate-950/80 border border-purple-500/20 rounded-2xl p-8 shadow-xl">
           <div className="flex items-center gap-4">
+
             <span className="text-2xl p-3 bg-purple-500/10 border border-purple-500/30 rounded-xl">
               ⚡
             </span>
@@ -129,6 +130,7 @@ export default function ToolsPage() {
                 Explore available software tools and practical gameplay tips.
               </p>
             </div>
+
           </div>
         </div>
 
@@ -146,6 +148,7 @@ export default function ToolsPage() {
                 key={tool.name}
                 className="bg-slate-950/80 border border-purple-500/20 rounded-2xl overflow-hidden shadow-xl"
               >
+
                 {/* Image */}
                 <div className="relative h-36 overflow-hidden">
                   <img
@@ -201,6 +204,7 @@ export default function ToolsPage() {
                     </button>
                   )}
                 </div>
+
               </div>
             ))}
           </div>
@@ -282,7 +286,9 @@ export default function ToolsPage() {
             </div>
 
           </div>
+
         </div>
+
       </div>
     </div>
   );

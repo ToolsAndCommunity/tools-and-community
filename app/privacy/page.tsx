@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community respects your privacy. This Privacy Policy
+              Gameplate respects your privacy. This Privacy Policy
               explains how information may be handled when you visit or use
               our website, tools, gaming resources, and community content.
             </p>
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community does not currently require users to create
+              Gameplate does not currently require users to create
               an account and does not intentionally collect personal
               information such as names, passwords, or payment information
               through the website.
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community may display advertisements provided by
+              Gameplate may display advertisements provided by
               third-party advertising services, including Google advertising
               services.
             </p>
@@ -123,7 +123,7 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community is not responsible for the privacy practices
+              Gameplate is not responsible for the privacy practices
               of third-party websites or services that are outside our
               control.
             </p>
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="text-sm text-slate-400 leading-relaxed mt-3">
-              Tools & Community is not intentionally designed to collect
+              Gameplate is not intentionally designed to collect
               personal information from children. If you believe that a child
               has provided personal information to us, please contact us so
               that we can review the situation and take appropriate action.
@@ -208,7 +208,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Footer Note */}
         <div className="text-center text-xs text-slate-600 mt-6">
-          © 2026 Tools & Community. All rights reserved.
+          © 2026 Gameplate. All rights reserved.
         </div>
 
       </div>

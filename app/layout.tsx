@@ -2,7 +2,7 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata = {
-  title: "Tools & Community",
+  title: "Gameplate",
   description: "Modern tools, gaming resources and community platform",
 };
 
@@ -23,47 +23,61 @@ export default function RootLayout({
 
         {/* Navbar */}
         <header className="sticky top-0 z-50 border-b border-slate-900 bg-[#02040a]/80 backdrop-blur-md">
-          <div className="grid grid-cols-3 items-center px-8 py-6">
+          <div className="flex items-center justify-between gap-4 px-6 sm:px-10 lg:px-14 py-4">
 
-            {/* Logo */}
-            <Link
-              href="/"
-              className="text-lg font-black tracking-widest text-white justify-self-start hover:opacity-80 transition"
-            >
-              TOOLS <span className="text-purple-400">&</span> COMMUNITY
-            </Link>
+            {/* Logo Area */}
+            <div className="flex items-center gap-3 min-w-0 shrink-0">
+
+              {/* Future Site Image */}
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-slate-800 bg-slate-950/80 flex items-center justify-center shrink-0">
+                <span className="text-xs text-purple-400">G</span>
+              </div>
+
+              <Link
+                href="/"
+                className="text-base sm:text-lg font-black tracking-widest text-white hover:opacity-80 transition whitespace-nowrap"
+              >
+                GAMEPLATE
+              </Link>
+
+            </div>
 
             {/* Navigation */}
-            <nav className="justify-self-center flex items-center gap-3 bg-slate-950/90 border border-slate-800 p-2 rounded-2xl shadow-xl">
+            <nav className="flex items-center gap-1 sm:gap-2 bg-slate-950/90 border border-slate-800 p-1.5 sm:p-2 rounded-xl sm:rounded-2xl shadow-xl shrink-0">
+
+              <Link
+                href="/"
+                className="px-2.5 sm:px-4 py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-1.5 sm:gap-2"
+              >
+                <span>⌂</span>
+                <span>Home</span>
+              </Link>
 
               <Link
                 href="/tools"
-                className="px-4 py-2 rounded-xl text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-2"
+                className="px-2.5 sm:px-4 py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-1.5 sm:gap-2"
               >
                 <span>⚡</span>
-                Tools
+                <span>Tools</span>
               </Link>
 
               <Link
                 href="/games"
-                className="px-4 py-2 rounded-xl text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-2"
+                className="px-2.5 sm:px-4 py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-1.5 sm:gap-2"
               >
                 <span>🎮</span>
-                Games
+                <span>Games</span>
               </Link>
 
               <Link
                 href="/news"
-                className="px-4 py-2 rounded-xl text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-2"
+                className="px-2.5 sm:px-4 py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-1.5 sm:gap-2"
               >
                 <span>📰</span>
-                News
+                <span>News</span>
               </Link>
 
             </nav>
-
-            {/* Right Side */}
-            <div></div>
 
           </div>
         </header>
@@ -83,7 +97,7 @@ export default function RootLayout({
               {/* About */}
               <div>
                 <h5 className="text-sm font-black tracking-widest text-white">
-                  TOOLS <span className="text-purple-400">&</span> COMMUNITY
+                  GAMEPLATE
                 </h5>
 
                 <p className="text-sm text-slate-500 leading-relaxed mt-4 max-w-md">
@@ -99,6 +113,13 @@ export default function RootLayout({
                 </h5>
 
                 <div className="flex flex-col gap-3 mt-4">
+
+                  <Link
+                    href="/"
+                    className="text-sm text-slate-500 hover:text-purple-400 transition"
+                  >
+                    Home
+                  </Link>
 
                   <Link
                     href="/tools"
@@ -169,7 +190,7 @@ export default function RootLayout({
             <div className="border-t border-slate-900 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
 
               <p className="text-xs text-slate-600">
-                © 2026 Tools & Community. All rights reserved.
+                © 2026 Gameplate. All rights reserved.
               </p>
 
               <p className="text-xs text-slate-700">
