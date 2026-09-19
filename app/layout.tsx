@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[#02040a] text-slate-100 flex flex-col">
+      <body className="min-h-screen bg-[#02040a] text-slate-100 flex flex-col overflow-x-hidden">
 
         {/* Background */}
         <div className="fixed inset-0 pointer-events-none z-0">
@@ -23,19 +23,19 @@ export default function RootLayout({
 
         {/* Navbar */}
         <header className="sticky top-0 z-50 border-b border-slate-900 bg-[#02040a]/80 backdrop-blur-md">
-          <div className="flex items-center justify-between gap-4 px-6 sm:px-10 lg:px-14 py-4">
+          <div className="flex items-center justify-between gap-2 sm:gap-4 px-2.5 sm:px-10 lg:px-14 py-3 sm:py-4">
 
             {/* Logo Area */}
-            <div className="flex items-center gap-3 min-w-0 shrink-0">
+            <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 shrink-0">
 
               {/* Future Site Image */}
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg border border-slate-800 bg-slate-950/80 flex items-center justify-center shrink-0">
-                <span className="text-xs text-purple-400">G</span>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg border border-slate-800 bg-slate-950/80 flex items-center justify-center shrink-0">
+                <span className="text-[10px] sm:text-xs text-purple-400">G</span>
               </div>
 
               <Link
                 href="/"
-                className="text-base sm:text-lg font-black tracking-widest text-white hover:opacity-80 transition whitespace-nowrap"
+                className="text-[11px] sm:text-lg font-black tracking-[0.12em] sm:tracking-widest text-white hover:opacity-80 transition whitespace-nowrap"
               >
                 GAMEPLATE
               </Link>
@@ -43,11 +43,11 @@ export default function RootLayout({
             </div>
 
             {/* Navigation */}
-            <nav className="flex items-center gap-1 sm:gap-2 bg-slate-950/90 border border-slate-800 p-1.5 sm:p-2 rounded-xl sm:rounded-2xl shadow-xl shrink-0">
+            <nav className="flex items-center gap-0.5 sm:gap-2 bg-slate-950/90 border border-slate-800 p-1 sm:p-2 rounded-lg sm:rounded-2xl shadow-xl shrink-0">
 
               <Link
                 href="/"
-                className="px-2.5 sm:px-4 py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-1.5 sm:gap-2"
+                className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
               >
                 <span>⌂</span>
                 <span>Home</span>
@@ -55,7 +55,7 @@ export default function RootLayout({
 
               <Link
                 href="/tools"
-                className="px-2.5 sm:px-4 py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-1.5 sm:gap-2"
+                className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
               >
                 <span>⚡</span>
                 <span>Tools</span>
@@ -63,7 +63,7 @@ export default function RootLayout({
 
               <Link
                 href="/games"
-                className="px-2.5 sm:px-4 py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-1.5 sm:gap-2"
+                className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
               >
                 <span>🎮</span>
                 <span>Games</span>
@@ -71,7 +71,7 @@ export default function RootLayout({
 
               <Link
                 href="/news"
-                className="px-2.5 sm:px-4 py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-1.5 sm:gap-2"
+                className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
               >
                 <span>📰</span>
                 <span>News</span>
