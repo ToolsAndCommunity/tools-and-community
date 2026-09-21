@@ -28,9 +28,104 @@ export default function RootLayout({
             {/* Logo Area */}
             <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 shrink-0">
 
-              {/* Future Site Image */}
-              <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg border border-slate-800 bg-slate-950/80 flex items-center justify-center shrink-0">
-                <span className="text-[10px] sm:text-xs text-purple-400">G</span>
+              {/* GamePlate Logo */}
+              <div className="w-7 h-7 sm:w-9 sm:h-9 shrink-0 flex items-center justify-center">
+                <svg
+                  viewBox="0 0 64 64"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-full h-full"
+                  aria-label="GamePlate logo"
+                >
+                  <defs>
+                    <filter
+                      id="purpleGlow"
+                      x="-100%"
+                      y="-100%"
+                      width="300%"
+                      height="300%"
+                    >
+                      <feGaussianBlur
+                        stdDeviation="2.5"
+                        result="blur"
+                      />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+
+                    <linearGradient
+                      id="purpleFire"
+                      x1="0"
+                      y1="1"
+                      x2="1"
+                      y2="0"
+                    >
+                      <stop offset="0%" stopColor="#7c3aed" />
+                      <stop offset="50%" stopColor="#a855f7" />
+                      <stop offset="100%" stopColor="#d8b4fe" />
+                    </linearGradient>
+                  </defs>
+
+                  {/* Hafif mor yangın */}
+                  <path
+                    d="M12 48
+                       C7 43 10 37 15 34
+                       C12 29 16 24 21 22
+                       C20 28 24 29 26 25
+                       C29 20 31 15 34 11
+                       C35 18 40 20 39 27
+                       C43 24 47 27 47 32
+                       C53 34 55 40 51 46
+                       C47 53 39 56 30 56
+                       C22 56 16 53 12 48Z"
+                    fill="none"
+                    stroke="url(#purpleFire)"
+                    strokeWidth="2"
+                    opacity="0.75"
+                    filter="url(#purpleGlow)"
+                  />
+
+                  {/* G */}
+                  <text
+                    x="22"
+                    y="42"
+                    textAnchor="middle"
+                    fontFamily="Arial, Helvetica, sans-serif"
+                    fontSize="22"
+                    fontWeight="900"
+                    fill="white"
+                  >
+                    G
+                  </text>
+
+                  {/* Mor / */}
+                  <text
+                    x="32"
+                    y="42"
+                    textAnchor="middle"
+                    fontFamily="Arial, Helvetica, sans-serif"
+                    fontSize="23"
+                    fontWeight="900"
+                    fill="#a855f7"
+                    filter="url(#purpleGlow)"
+                  >
+                    /
+                  </text>
+
+                  {/* P */}
+                  <text
+                    x="43"
+                    y="42"
+                    textAnchor="middle"
+                    fontFamily="Arial, Helvetica, sans-serif"
+                    fontSize="22"
+                    fontWeight="900"
+                    fill="white"
+                  >
+                    P
+                  </text>
+                </svg>
               </div>
 
               <Link
