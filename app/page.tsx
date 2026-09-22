@@ -45,13 +45,14 @@ export default function Home() {
 
         return prev + 1;
       });
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="min-h-screen bg-[#02040a] text-slate-100 flex flex-col justify-between relative overflow-hidden font-sans select-none">
+
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-10 left-12 w-1 h-1 bg-white rounded-full opacity-50 animate-pulse" />
         <div className="absolute top-24 right-20 w-1.5 h-1.5 bg-white rounded-full opacity-40" />
