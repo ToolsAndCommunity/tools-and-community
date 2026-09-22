@@ -7,30 +7,30 @@ export default function Home() {
   const heroSlides = [
     {
       id: 1,
-      title: "NetSec PRO Coming Soon!",
+      title: "Brawl Stars x Duolingo Event Is Live!",
       description:
-        "The advanced NetSec PRO version, featuring a fully pro-grade design, will soon be available for download through this platform.",
-      tag: "PRO Version & Security",
+        "The Brawl Stars x Duolingo event is now live, bringing Duo into Starr Park with special community challenges, a new Duo Boss Fight, and free rewards.",
+      tag: "Live Event & Free Rewards",
       imageSrc:
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop",
+        "https://brawlstars.inbox.supercell.com/xdjcscmv3zo3/5omIxH4UKTOsFdhFPxTw2Q/a04ac2c785ca87a3905c72b2ccbba750/web.png",
     },
     {
       id: 2,
-      title: "Brawl Macro is Live!",
+      title: "Persona 4 Revival Introduces Naoto!",
       description:
-        "Brawl Macro is now live in its initial release, allowing you to use a simple bot for Brawl Stars and create your own macros with anti-ban protection!",
-      tag: "Announcement & Free Version",
+        "Persona 4 Revival has revealed Naoto Shirogane in a new character trailer, giving fans a closer look at the detective and her role in the upcoming remake.",
+      tag: "New Character Reveal",
       imageSrc:
-        "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1000&auto=format&fit=crop",
+        "https://media.altchar.com/prod/images/gm_featured_image/8bd52b73e490-persona-4-revival.webp",
     },
     {
       id: 3,
-      title: "One Gun Auto Farm is Live!",
+      title: "Wo Long 2 Gets New Gameplay!",
       description:
-        "The auto farm tool for One Gun stickman is now live and free to use!",
-      tag: "Announcement & Free Version",
+        "Wo Long 2: Wings of Ember has shown new gameplay and details ahead of its March 2027 release, including its evolved combat system and dark Three Kingdoms setting.",
+      tag: "Gameplay Reveal",
       imageSrc:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+        "https://image.jeuxvideo.com/medias/178091/1780905246-6253-jaquette-avant.jpg",
     },
   ];
 
@@ -45,14 +45,13 @@ export default function Home() {
 
         return prev + 1;
       });
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="min-h-screen bg-[#02040a] text-slate-100 flex flex-col justify-between relative overflow-hidden font-sans select-none">
-
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-10 left-12 w-1 h-1 bg-white rounded-full opacity-50 animate-pulse" />
         <div className="absolute top-24 right-20 w-1.5 h-1.5 bg-white rounded-full opacity-40" />
@@ -66,10 +65,8 @@ export default function Home() {
       </div>
 
       <main className="relative z-10 flex-1 max-w-6xl w-full mx-auto px-4 py-8 flex flex-col gap-8">
-
         <section className="bg-slate-950/80 border border-purple-500/20 rounded-2xl p-5 md:p-6 relative overflow-hidden shadow-2xl backdrop-blur-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
-
             <div className="relative h-56 md:h-72 w-full bg-slate-900 rounded-2xl border border-purple-500/20 overflow-hidden shadow-inner">
               <img
                 src={heroSlides[currentSlide].imageSrc}
@@ -88,7 +85,6 @@ export default function Home() {
 
             <div className="flex flex-col min-h-56 md:min-h-72">
               <div className="flex flex-col gap-2 flex-1">
-
                 {heroSlides.map((slide, index) => (
                   <button
                     key={slide.id}
@@ -110,23 +106,20 @@ export default function Home() {
                     </span>
                   </button>
                 ))}
-
               </div>
 
               <Link
                 href="/news"
                 className="mt-3 w-full rounded-xl bg-purple-600 hover:bg-purple-500 border border-purple-500 text-white font-bold text-sm py-3 text-center transition shadow-lg shadow-purple-900/30"
               >
-                Tüm Haberler
+                All News
               </Link>
             </div>
-
           </div>
         </section>
 
         <section className="bg-slate-950/70 border border-slate-900 rounded-2xl p-6 md:p-8 backdrop-blur-sm shadow-xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link
               href="/tools"
               className="p-4 rounded-xl font-bold text-sm transition cursor-pointer flex flex-col items-center justify-center gap-2 border bg-purple-600 text-white border-purple-500 shadow-lg shadow-purple-900/40 hover:bg-purple-500"
@@ -142,18 +135,8 @@ export default function Home() {
               <span className="text-lg">🎮</span>
               <span>Games</span>
             </Link>
-
-            <Link
-              href="/news"
-              className="p-4 rounded-xl font-bold text-sm transition cursor-pointer flex flex-col items-center justify-center gap-2 border bg-purple-600 text-white border-purple-500 shadow-lg shadow-purple-900/40 hover:bg-purple-500"
-            >
-              <span className="text-lg">📰</span>
-              <span>News</span>
-            </Link>
-
           </div>
         </section>
-
       </main>
     </div>
   );

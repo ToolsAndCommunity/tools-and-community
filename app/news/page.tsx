@@ -1,46 +1,97 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function NewsPage() {
-  // News data categorized (All dates updated to the current date of September 3, 2026)
   const newsCategories = [
     {
       categoryTitle: "🚀 Newly Released Games",
-      categoryDesc: "Latest titles newly added to our platform and initial integration announcements.",
+      categoryDesc:
+        "Latest titles newly released and recently introduced to the gaming community.",
       items: [
-        { id: 1, title: "Pragmata", date: "September 3, 2026", tag: "New Release (PC)", summary: "An immersive adventure set in a lunar-based dystopian atmosphere within Capcom's next-gen sci-fi action-adventure world." },
-        { id: 2, title: "Kingdom Rush 6: Genesis TD", date: "September 3, 2026", tag: "New Game (Mobile)", summary: "The brand-new installment of the legendary tower defense series released for mobile platforms, taking its place on mobile devices with tactical depth and fresh hero abilities." }
-      ]
+        {
+          id: 1,
+          title: "The Blood of Dawnwalker",
+          date: "September 2026",
+          tag: "New Release (PC)",
+          summary:
+            "A dark fantasy RPG from Rebel Wolves has arrived as one of September's notable PC releases, combining an open-world adventure with a vampire-focused setting, exploration, combat, and meaningful story choices.",
+        },
+        {
+          id: 2,
+          title: "Shape of Dreams",
+          date: "September 17, 2026",
+          tag: "New Release (Xbox)",
+          summary:
+            "Shape of Dreams has expanded to Xbox after gaining attention on PC. The action-roguelike combines fast-paced combat with customizable abilities and a replayable adventure designed for players who enjoy experimenting with different builds.",
+        },
+      ],
     },
     {
       categoryTitle: "🔥 Popular Games",
-      categoryDesc: "Titles that the community is most interested in and actively playing.",
+      categoryDesc:
+        "Games currently receiving significant attention and active player interest.",
       items: [
-        { id: 3, title: "Brawl Stars", date: "September 3, 2026", tag: "Popular (Mobile)", summary: "The shooter phenomenon of the mobile world that never leaves the top, keeping players hooked with constantly updated seasons and competitive character dynamics." },
-        { id: 4, title: "PUBG Mobile", date: "September 3, 2026", tag: "Popular (Mobile)", summary: "The most populated action arena of mobile platforms with its vast battlegrounds, tactical survival mechanics, and massive community base." }
-      ]
+        {
+          id: 3,
+          title: "Brawl Stars x Duolingo Event Goes Live",
+          date: "September 19, 2026",
+          tag: "Live Event (Mobile)",
+          summary:
+            "Brawl Stars has launched a limited-time collaboration with Duolingo. The event brings Duo into Starr Park, adds special challenges and a Boss Fight, and gives players several opportunities to collect rewards before the crossover ends.",
+        },
+        {
+          id: 4,
+          title: "PUBG MOBILE Adds Midnight Hunters",
+          date: "September 2026",
+          tag: "Major Update (Mobile)",
+          summary:
+            "PUBG MOBILE's Version 4.6 update introduces Midnight Hunters, a supernatural-themed experience featuring vampires, monster hunting mechanics, new events, and additional content across several parts of the game.",
+        },
+      ],
     },
     {
       categoryTitle: "⚡ Featured Games",
-      categoryDesc: "Supported titles that are featured and actively available on our platform.",
+      categoryDesc:
+        "Games currently featured because of major updates, announcements, or upcoming releases.",
       items: [
-        { id: 5, title: "Brawl Stars", date: "September 3, 2026", tag: "Featured Game", summary: "An actively supported title featured on our platform with gameplay resources, tactics, and community-focused content." },
-        { id: 6, title: "One Gun", date: "September 3, 2026", tag: "Featured Game", summary: "A featured title on our platform with progression-focused content and community resources." }
-      ]
+        {
+          id: 5,
+          title: "Persona 4 Revival Gets New Details",
+          date: "September 17, 2026",
+          tag: "Featured Upcoming Game",
+          summary:
+            "Persona 4 Revival received new information during the Xbox Tokyo Game Show presentation. The upcoming remake continues to modernize the classic mystery RPG while bringing its characters and world to a new generation of players.",
+        },
+        {
+          id: 6,
+          title: "Wo Long 2: Wings of Ember Shows New Gameplay",
+          date: "September 17, 2026",
+          tag: "Featured Upcoming Game",
+          summary:
+            "Wo Long 2: Wings of Ember received a new gameplay presentation showcasing a powerful boss encounter and additional combat details. The sequel is scheduled to launch in 2027 across major platforms.",
+        },
+      ],
     },
     {
       categoryTitle: "⭐ Moderator's Recommendation",
-      categoryDesc: "Special recommendations, tips, and important announcements chosen by our team members.",
+      categoryDesc:
+        "A special title selected by our team for players looking for something worth trying.",
       items: [
-        { id: 7, title: "One Gun", date: "September 3, 2026", tag: "Important Recommendation", summary: "Our moderator team's favorite recommendation that we strongly advise you to try this period, with unique wave mechanics and in-depth progression dynamics." }
-      ]
-    }
+        {
+          id: 7,
+          title: "One Gun",
+          date: "September 22, 2026",
+          tag: "Moderator's Recommendation",
+          summary:
+            "One Gun remains one of the titles highlighted by the GamePlate team. Its straightforward gameplay, wave-based action, and progression system make it a simple but enjoyable choice for players who want something easy to pick up while still having room to improve.",
+        },
+      ],
+    },
   ];
 
   return (
     <div className="min-h-screen bg-[#02040a] text-slate-100 flex flex-col justify-between relative overflow-hidden font-sans select-none">
-      
       {/* Background star effect */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-10 left-12 w-1 h-1 bg-white rounded-full opacity-50 animate-pulse"></div>
@@ -52,18 +103,22 @@ export default function NewsPage() {
         <div className="absolute bottom-16 right-16 w-1 h-1 bg-white rounded-full opacity-55"></div>
       </div>
 
-      {/* Top Menu (Navbar) */}
-
       {/* Main Content */}
       <main className="relative z-10 flex-1 max-w-6xl w-full mx-auto px-4 py-8 flex flex-col gap-10">
-        
         {/* Top Header */}
         <div className="bg-slate-950/80 border border-purple-500/20 rounded-2xl p-6 md:p-8 backdrop-blur-sm shadow-xl">
           <div className="flex items-center gap-3">
-            <span className="text-2xl p-2.5 bg-purple-500/10 border border-purple-500/30 rounded-xl">📰</span>
+            <span className="text-2xl p-2.5 bg-purple-500/10 border border-purple-500/30 rounded-xl">
+              📰
+            </span>
             <div>
-              <h1 className="text-2xl font-extrabold text-white">News & Announcements</h1>
-              <p className="text-xs md:text-sm text-slate-400">Newly released games, popular titles, featured games, and moderator recommendations.</p>
+              <h1 className="text-2xl font-extrabold text-white">
+                News & Announcements
+              </h1>
+              <p className="text-xs md:text-sm text-slate-400">
+                Newly released games, popular titles, featured games, and
+                moderator recommendations.
+              </p>
             </div>
           </div>
         </div>
@@ -72,14 +127,17 @@ export default function NewsPage() {
         <div className="flex flex-col gap-10">
           {newsCategories.map((cat, index) => (
             <div key={index} className="flex flex-col gap-4">
-              
               {/* Category Title and Description */}
               <div className="border-b border-slate-900 pb-3 px-1">
-                <h2 className="text-xl font-black text-white">{cat.categoryTitle}</h2>
-                <p className="text-xs text-slate-400 mt-0.5">{cat.categoryDesc}</p>
+                <h2 className="text-xl font-black text-white">
+                  {cat.categoryTitle}
+                </h2>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  {cat.categoryDesc}
+                </p>
               </div>
 
-              {/* News Cards within Category (Grid) */}
+              {/* News Cards within Category */}
               <div className="grid md:grid-cols-2 gap-4">
                 {cat.items.map((news) => (
                   <div
@@ -95,17 +153,21 @@ export default function NewsPage() {
                           {news.date}
                         </span>
                       </div>
-                      <h3 className="text-base font-extrabold text-white">{news.title}</h3>
-                      <p className="text-xs text-slate-300 leading-relaxed">{news.summary}</p>
+
+                      <h3 className="text-base font-extrabold text-white">
+                        {news.title}
+                      </h3>
+
+                      <p className="text-xs text-slate-300 leading-relaxed">
+                        {news.summary}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
-
             </div>
           ))}
         </div>
-
       </main>
 
       {/* Footer */}
