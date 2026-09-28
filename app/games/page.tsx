@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function GamesPage() {
   const gameModules = [
@@ -18,12 +18,12 @@ export default function GamesPage() {
       features: [
         "Next-gen Unreal Engine 5 physics engine",
         "Advanced dystopian lunar-based story mode",
-        "Custom cinematic camera angles and dynamic combat mechanics"
+        "Custom cinematic camera angles and dynamic combat mechanics",
       ],
       modules: {
         news: { active: true, label: "Read News", href: "/news" },
-        tactics: { active: false, label: "Explore Tactics", href: "/tools" }
-      }
+        tactics: { active: false, label: "Explore Tactics", href: "/tools" },
+      },
     },
     {
       id: 2,
@@ -39,12 +39,12 @@ export default function GamesPage() {
       features: [
         "Expanded skill tree and 4 different hero classes",
         "Offline playability and strategic challenge modes",
-        "Special weekly tournaments and global leaderboard ranking"
+        "Special weekly tournaments and global leaderboard ranking",
       ],
       modules: {
         news: { active: true, label: "Read News", href: "/news" },
-        tactics: { active: false, label: "Explore Tactics", href: "/tools" }
-      }
+        tactics: { active: false, label: "Explore Tactics", href: "/tools" },
+      },
     },
     {
       id: 3,
@@ -60,12 +60,12 @@ export default function GamesPage() {
       features: [
         "Advanced trophy progression and match strategies",
         "Custom map editor and community votes",
-        "Competitive 3v3 gameplay and ranked progression"
+        "Competitive 3v3 gameplay and ranked progression",
       ],
       modules: {
         news: { active: true, label: "Read News", href: "/news" },
-        tactics: { active: true, label: "Explore Tactics", href: "/tools" }
-      }
+        tactics: { active: true, label: "Explore Tactics", href: "/tools" },
+      },
     },
     {
       id: 4,
@@ -81,12 +81,12 @@ export default function GamesPage() {
       features: [
         "Ultra HD graphics support and 90/120 FPS smooth gameplay experience",
         "Wide map options (Erangel, Miramar, Livik, Sanhok)",
-        "Esports-oriented tournament and competitive ranking system"
+        "Esports-oriented tournament and competitive ranking system",
       ],
       modules: {
         news: { active: true, label: "Read News", href: "/news" },
-        tactics: { active: true, label: "Explore Tactics", href: "/tools" }
-      }
+        tactics: { active: true, label: "Explore Tactics", href: "/tools" },
+      },
     },
     {
       id: 5,
@@ -102,17 +102,17 @@ export default function GamesPage() {
       features: [
         "Level up and wave optimization guides",
         "Item farming and progression strategies",
-        "Tactics sharing support"
+        "Tactics sharing support",
       ],
       modules: {
         news: { active: true, label: "Read News", href: "/news" },
-        tactics: { active: true, label: "Explore Tactics", href: "/tools" }
-      }
-    }
+        tactics: { active: true, label: "Explore Tactics", href: "/tools" },
+      },
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-[#02040a] text-slate-100 flex flex-col justify-between relative overflow-hidden font-sans select-none">
+    <div className="games-page min-h-screen bg-[#02040a] text-slate-100 flex flex-col justify-between relative overflow-hidden font-sans select-none">
 
       {/* Background star effect */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -129,7 +129,7 @@ export default function GamesPage() {
       <main className="relative z-10 flex-1 max-w-6xl w-full mx-auto px-4 py-8 flex flex-col gap-10">
 
         {/* Top Header */}
-        <div className="bg-slate-950/80 border border-purple-500/20 rounded-2xl p-6 md:p-8 backdrop-blur-sm shadow-xl">
+        <div className="games-info-panel bg-slate-950/80 border border-purple-500/20 rounded-2xl p-6 md:p-8 backdrop-blur-sm shadow-xl">
           <div className="flex items-center gap-3">
             <span className="text-2xl p-2.5 bg-purple-500/10 border border-purple-500/30 rounded-xl">
               🎮
@@ -153,7 +153,7 @@ export default function GamesPage() {
           {gameModules.map((game) => (
             <div
               key={game.id}
-              className="relative rounded-2xl overflow-hidden border border-slate-800 hover:border-purple-500/50 transition shadow-xl flex flex-col justify-between group"
+              className="games-card relative rounded-2xl overflow-hidden border border-slate-800 hover:border-purple-500/50 transition shadow-xl flex flex-col justify-between group"
             >
 
               {/* Background Image */}
@@ -162,6 +162,7 @@ export default function GamesPage() {
                 style={{ backgroundImage: `url(${game.bgImage})` }}
               ></div>
 
+              {/* Dark Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#02040a] via-[#02040a]/95 to-[#02040a]/70 z-0"></div>
 
               {/* Card Top Section */}
@@ -253,7 +254,6 @@ export default function GamesPage() {
           ))}
 
         </div>
-
       </main>
 
       {/* Footer */}
@@ -261,6 +261,66 @@ export default function GamesPage() {
         © 2026 Gameplate - Games Module.
       </footer>
 
+      {/* =====================================================
+          LIGHT MODE ONLY
+          ===================================================== */}
+
+      <style jsx global>{`
+        html[data-theme="light"] .games-info-panel {
+          background-color: #ffffff !important;
+          border-color: rgba(168, 85, 247, 0.25) !important;
+        }
+
+        html[data-theme="light"] .games-info-panel .text-white {
+          color: #0f172a !important;
+        }
+
+        html[data-theme="light"] .games-info-panel .text-slate-400 {
+          color: #475569 !important;
+        }
+
+        /*
+          Games cards intentionally stay dark in Light Mode.
+          This prevents the global light-theme rules from changing
+          the card appearance, text, overlays or buttons.
+        */
+
+        html[data-theme="light"] .games-card {
+          color: #f1f5f9 !important;
+        }
+
+        html[data-theme="light"] .games-card .text-white {
+          color: #ffffff !important;
+        }
+
+        html[data-theme="light"] .games-card .text-slate-300 {
+          color: #cbd5e1 !important;
+        }
+
+        html[data-theme="light"] .games-card .text-slate-400 {
+          color: #94a3b8 !important;
+        }
+
+        html[data-theme="light"] .games-card .bg-slate-900\\/80 {
+          background-color: rgba(15, 23, 42, 0.8) !important;
+        }
+
+        html[data-theme="light"] .games-card .border-slate-800 {
+          border-color: #1e293b !important;
+        }
+
+        html[data-theme="light"] .games-card .border-slate-700\\/60 {
+          border-color: rgba(51, 65, 85, 0.6) !important;
+        }
+
+        html[data-theme="light"] .games-card .bg-slate-700\\/60 {
+          background-color: rgba(51, 65, 85, 0.6) !important;
+        }
+
+        html[data-theme="light"] .games-card .text-slate-500 {
+          color: #64748b !important;
+        }
+      `}</style>
     </div>
   );
 }

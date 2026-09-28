@@ -2,9 +2,255 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================================================
+   BASE
+   ========================================================= */
+
 @layer base {
   body {
     background-color: #030712;
     color: #f1f5f9;
   }
+}
+
+/* =========================================================
+   DARK / LIGHT BODY
+   ========================================================= */
+
+html[data-theme="dark"] body {
+  background-color: #030712;
+  color: #f1f5f9;
+}
+
+html[data-theme="light"] body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* =========================================================
+   THEME TOGGLE
+   ========================================================= */
+
+html[data-theme="dark"] .theme-toggle {
+  background-color: rgba(15, 23, 42, 0.9);
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .theme-toggle:hover {
+  background-color: rgba(30, 41, 59, 0.95);
+}
+
+html[data-theme="light"] .theme-toggle {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+html[data-theme="light"] .theme-toggle:hover {
+  background-color: #f1f5f9;
+}
+
+/* =========================================================
+   LIGHT MODE - MAIN BACKGROUND
+   ========================================================= */
+
+html[data-theme="light"] .bg-\[\#02040a\] {
+  background-color: #f8fafc !important;
+}
+
+html[data-theme="light"] .bg-\[\#030712\] {
+  background-color: #f8fafc !important;
+}
+
+/* =========================================================
+   LIGHT MODE - NAVBAR
+   ========================================================= */
+
+html[data-theme="light"] header {
+  background-color: rgba(248, 250, 252, 0.92) !important;
+  border-color: #e2e8f0 !important;
+}
+
+html[data-theme="light"] nav {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-color: #cbd5e1 !important;
+}
+
+html[data-theme="light"] nav .text-slate-300 {
+  color: #334155 !important;
+}
+
+html[data-theme="light"] nav .text-slate-300:hover {
+  color: #0f172a !important;
+}
+
+/* =========================================================
+   LOGO - G / P
+   ========================================================= */
+
+html[data-theme="dark"] svg .logo-gp-letter {
+  fill: #ffffff !important;
+}
+
+html[data-theme="light"] svg .logo-gp-letter {
+  fill: #000000 !important;
+}
+
+/* =========================================================
+   GAMEPLATE NAVBAR BRAND
+   ========================================================= */
+
+/*
+   layout.tsx yapısında Gameplate linki:
+
+   header
+     > div
+       > div:first-child
+         > Link href="/"
+
+   Bu selector sadece navbar'daki Gameplate yazısını hedefler.
+*/
+
+html[data-theme="dark"]
+header > div > div:first-child > a[href="/"] {
+  color: #ffffff !important;
+}
+
+html[data-theme="light"]
+header > div > div:first-child > a[href="/"] {
+  color: #000000 !important;
+}
+
+/* Link içindeki metin */
+html[data-theme="dark"]
+header > div > div:first-child > a[href="/"] * {
+  color: #ffffff !important;
+}
+
+html[data-theme="light"]
+header > div > div:first-child > a[href="/"] * {
+  color: #000000 !important;
+}
+
+/* =========================================================
+   LOGO G / P
+   ========================================================= */
+
+html[data-theme="dark"]
+header > div > div:first-child svg .logo-gp-letter {
+  fill: #ffffff !important;
+}
+
+html[data-theme="light"]
+header > div > div:first-child svg .logo-gp-letter {
+  fill: #000000 !important;
+}
+
+/* =========================================================
+   LIGHT MODE - FOOTER
+   ========================================================= */
+
+html[data-theme="light"] footer {
+  background-color: rgba(248, 250, 252, 0.96) !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* =========================================================
+   LIGHT MODE - HOME MODULE CARDS
+   ========================================================= */
+
+html[data-theme="light"] .bg-slate-950 {
+  background-color: #ffffff !important;
+}
+
+/* =========================================================
+   LIGHT MODE - PURPLE BACKGROUND GLOWS
+   ========================================================= */
+
+html[data-theme="light"] .bg-purple-600\/10 {
+  background-color: rgba(168, 85, 247, 0.055) !important;
+}
+
+html[data-theme="light"] .bg-purple-500\/5 {
+  background-color: rgba(168, 85, 247, 0.035) !important;
+}
+
+/* =========================================================
+   LIGHT MODE - GAMES TOP INFORMATION BOX
+   ========================================================= */
+
+html[data-theme="light"] main > div:first-child.bg-slate-950\/80 {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(168, 85, 247, 0.25) !important;
+}
+
+html[data-theme="light"] main > div:first-child.bg-slate-950\/80 h1 {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] main > div:first-child.bg-slate-950\/80 p {
+  color: #475569 !important;
+}
+
+/* =========================================================
+   LIGHT MODE - TOOLS TACTICS TITLES
+   ========================================================= */
+
+html[data-theme="light"] .tactics-title,
+html[data-theme="light"] .tactic-title {
+  color: #0f172a !important;
+}
+
+/* =========================================================
+   LIGHT MODE - NEWS SELECTED MODULE
+   ========================================================= */
+
+/* Seçili modül başlığı */
+html[data-theme="light"] main h2.text-white {
+  color: #0f172a !important;
+}
+
+/* Seçili modül açıklaması */
+html[data-theme="light"] main h2.text-white + p {
+  color: #0f172a !important;
+}
+
+/* Başlık farklı slate rengi kullanıyorsa */
+html[data-theme="light"] main h2.text-slate-100 {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] main h2.text-slate-200 {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] main h2.text-slate-300 {
+  color: #0f172a !important;
+}
+
+/* Açıklama */
+html[data-theme="light"] main h2.text-slate-100 + p,
+html[data-theme="light"] main h2.text-slate-200 + p,
+html[data-theme="light"] main h2.text-slate-300 + p {
+  color: #334155 !important;
+}
+
+/* =========================================================
+   DARK MODE - BACKGROUND STARS REMOVED
+   ========================================================= */
+
+html[data-theme="dark"] .pointer-events-none.z-0 > div {
+  display: none !important;
+}
+
+/* =========================================================
+   THEME TRANSITIONS
+   ========================================================= */
+
+html[data-theme="dark"] *,
+html[data-theme="light"] * {
+  transition-property: background-color, border-color, color, fill;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }

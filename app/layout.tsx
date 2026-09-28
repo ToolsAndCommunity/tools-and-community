@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./globals.css";
+import ThemeToggle from "./components/ThemeToggle";
 
 export const metadata = {
   title: "Gameplate",
@@ -13,11 +14,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[#02040a] text-slate-100 flex flex-col overflow-x-hidden">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  var theme = localStorage.getItem("gameplate-theme");
 
+                  document.documentElement.setAttribute(
+                    "data-theme",
+                    theme === "light" ? "light" : "dark"
+                  );
+                } catch (e) {
+                  document.documentElement.setAttribute(
+                    "data-theme",
+                    "dark"
+                  );
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
+
+      <body className="min-h-screen bg-[#02040a] text-slate-100 flex flex-col overflow-x-hidden">
         {/* Background */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-purple-600/10 blur-[140px] rounded-full" />
+
           <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[400px] bg-purple-500/5 blur-[120px] rounded-full" />
         </div>
 
@@ -48,6 +73,7 @@ export default function RootLayout({
                         stdDeviation="2.5"
                         result="blur"
                       />
+
                       <feMerge>
                         <feMergeNode in="blur" />
                         <feMergeNode in="SourceGraphic" />
@@ -94,7 +120,7 @@ export default function RootLayout({
                     fontFamily="Arial, Helvetica, sans-serif"
                     fontSize="22"
                     fontWeight="900"
-                    fill="white"
+                    className="logo-gp-letter"
                   >
                     G
                   </text>
@@ -121,7 +147,7 @@ export default function RootLayout({
                     fontFamily="Arial, Helvetica, sans-serif"
                     fontSize="22"
                     fontWeight="900"
-                    fill="white"
+                    className="logo-gp-letter"
                   >
                     P
                   </text>
@@ -134,46 +160,52 @@ export default function RootLayout({
               >
                 GAMEPLATE
               </Link>
-
             </div>
 
             {/* Navigation */}
-            <nav className="flex items-center gap-0.5 sm:gap-2 bg-slate-950/90 border border-slate-800 p-1 sm:p-2 rounded-lg sm:rounded-2xl shadow-xl shrink-0">
+            <div className="flex items-center gap-1 sm:gap-2">
+              <nav className="flex items-center gap-0.5 sm:gap-2 bg-slate-950/90 border border-slate-800 p-1 sm:p-2 rounded-lg sm:rounded-2xl shadow-xl shrink-0">
 
-              <Link
-                href="/"
-                className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
-              >
-                <span>⌂</span>
-                <span>Home</span>
-              </Link>
+                {/* Home */}
+                <Link
+                  href="/"
+                  className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
+                >
+                  <span>⌂</span>
+                  <span>Home</span>
+                </Link>
 
-              <Link
-                href="/tools"
-                className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
-              >
-                <span>⚡</span>
-                <span>Tools</span>
-              </Link>
+                {/* Tools */}
+                <Link
+                  href="/tools"
+                  className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
+                >
+                  <span>⚡</span>
+                  <span>Tools</span>
+                </Link>
 
-              <Link
-                href="/games"
-                className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
-              >
-                <span>🎮</span>
-                <span>Games</span>
-              </Link>
+                {/* Games */}
+                <Link
+                  href="/games"
+                  className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
+                >
+                  <span>🎮</span>
+                  <span>Games</span>
+                </Link>
 
-              <Link
-                href="/news"
-                className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
-              >
-                <span>📰</span>
-                <span>News</span>
-              </Link>
+                {/* News */}
+                <Link
+                  href="/news"
+                  className="px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-xl text-[10px] sm:text-sm font-bold text-slate-300 hover:text-white hover:bg-purple-500/10 transition flex items-center gap-0.5 sm:gap-2 whitespace-nowrap"
+                >
+                  <span>📰</span>
+                  <span>News</span>
+                </Link>
+              </nav>
 
-            </nav>
-
+              {/* Theme Toggle */}
+              <ThemeToggle />
+            </div>
           </div>
         </header>
 
@@ -184,9 +216,7 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer className="relative z-10 border-t border-slate-900 bg-[#02040a]/90 backdrop-blur-md mt-20">
-
           <div className="max-w-7xl mx-auto px-8 py-12">
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
               {/* About */}
@@ -208,7 +238,6 @@ export default function RootLayout({
                 </h5>
 
                 <div className="flex flex-col gap-3 mt-4">
-
                   <Link
                     href="/"
                     className="text-sm text-slate-500 hover:text-purple-400 transition"
@@ -236,7 +265,6 @@ export default function RootLayout({
                   >
                     News
                   </Link>
-
                 </div>
               </div>
 
@@ -247,7 +275,6 @@ export default function RootLayout({
                 </h5>
 
                 <div className="flex flex-col gap-3 mt-4">
-
                   <Link
                     href="/privacy"
                     className="text-sm text-slate-500 hover:text-purple-400 transition"
@@ -275,15 +302,12 @@ export default function RootLayout({
                   >
                     Contact
                   </Link>
-
                 </div>
               </div>
-
             </div>
 
             {/* Bottom */}
             <div className="border-t border-slate-900 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-
               <p className="text-xs text-slate-600">
                 © 2026 Gameplate. All rights reserved.
               </p>
@@ -291,13 +315,9 @@ export default function RootLayout({
               <p className="text-xs text-slate-700">
                 Modern tools. Gaming resources. Community.
               </p>
-
             </div>
-
           </div>
-
         </footer>
-
       </body>
     </html>
   );
