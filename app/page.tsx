@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeroNews from "./components/HeroNews";
 
 type NewsItem = {
+  id: string;
   category: string;
   title: string;
   date: string;
@@ -25,26 +26,37 @@ async function getLatestNews(): Promise<NewsItem[]> {
 
     const jsonFiles = files.filter((file) => file.endsWith(".json"));
 
-    const news = await Promise.all(
-      jsonFiles.map(async (file) => {
-        try {
-          const filePath = path.join(newsDirectory, file);
-          const fileContent = await fs.readFile(filePath, "utf8");
+    const news: NewsItem[] = [];
 
-          return JSON.parse(fileContent) as NewsItem;
-        } catch {
-          return null;
-        }
-      })
+    for (const file of jsonFiles) {
+      try {
+        const filePath = path.join(newsDirectory, file);
+        const fileContent = await fs.readFile(filePath, "utf8");
+
+        const data = JSON.parse(fileContent);
+
+        news.push({
+          id: file.replace(".json", ""),
+          category: data.category,
+          title: data.title,
+          date: data.date,
+          tag: data.tag,
+          summary: data.summary,
+          image: data.image,
+          content: data.content,
+          faq: data.faq,
+        });
+      } catch {
+        // Bozuk veya okunamayan JSON dosyalarını atla
+      }
+    }
+
+    news.sort(
+      (a, b) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
     );
 
-    return news
-      .filter((item): item is NewsItem => item !== null)
-      .sort(
-        (a, b) =>
-          new Date(b.date).getTime() - new Date(a.date).getTime()
-      )
-      .slice(0, 4);
+    return news.slice(0, 4);
   } catch {
     return [];
   }
