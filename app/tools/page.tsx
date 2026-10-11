@@ -25,6 +25,16 @@ export default function ToolsPage() {
       download: "/brawlmacro.exe",
     },
     {
+      name: "Pixel Printer",
+      version: "v1.0",
+      status: "Active",
+      description:
+        "For PC. Pixel Printer is a Windows desktop application for creating pixel-based artwork.",
+      image:
+        "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000&auto=format&fit=crop",
+      download: "/pixelprinter.exe",
+    },
+    {
       name: "NetSec",
       version: "v1.0",
       status: "Active",
@@ -101,7 +111,6 @@ export default function ToolsPage() {
         },
       ],
     },
-
     // Added game tactics only
     {
       id: "minecraft",
@@ -270,37 +279,31 @@ export default function ToolsPage() {
   const [openCategory, setOpenCategory] = useState<string | null>(null);
 
   const toggleCategory = (id: string) => {
-    setOpenCategory((current) => (current === id ? null : id));
+    setOpenCategory((current) => (current === id ? null : current));
   };
 
   return (
     <div className="min-h-screen px-4 py-8">
       <div className="max-w-6xl mx-auto">
-
         {/* Header */}
         <div className="bg-slate-950/80 border border-purple-500/20 rounded-2xl p-8 shadow-xl">
           <div className="flex items-center gap-4">
-
             <span className="text-2xl p-3 bg-purple-500/10 border border-purple-500/30 rounded-xl">
               ⚡
             </span>
-
             <div>
               <h1 className="text-2xl font-extrabold text-white">
                 Tools Center
               </h1>
-
               <p className="text-sm text-slate-400">
                 Explore available software tools and practical gameplay tips.
               </p>
             </div>
-
           </div>
         </div>
 
         {/* Main Grid */}
         <div className="grid md:grid-cols-2 gap-8 mt-8">
-
           {/* Tools */}
           <div className="flex flex-col gap-4">
             <h2 className="text-sm font-bold text-purple-400 uppercase tracking-wider">
@@ -312,7 +315,6 @@ export default function ToolsPage() {
                 key={tool.name}
                 className="bg-slate-950/80 border border-purple-500/20 rounded-2xl overflow-hidden shadow-xl"
               >
-
                 {/* Image */}
                 <div className="relative h-36 overflow-hidden">
                   <img
@@ -320,14 +322,12 @@ export default function ToolsPage() {
                     alt={tool.name}
                     className="w-full h-full object-cover opacity-60"
                   />
-
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
 
                   <div className="absolute bottom-3 left-5">
                     <span className="text-xs text-purple-400 font-bold">
                       {tool.version}
                     </span>
-
                     <h3 className="text-lg font-bold text-white">
                       {tool.name}
                     </h3>
@@ -368,14 +368,12 @@ export default function ToolsPage() {
                     </button>
                   )}
                 </div>
-
               </div>
             ))}
           </div>
 
           {/* Tactics */}
           <div className="bg-slate-950/80 border border-slate-900 rounded-2xl p-6 shadow-xl h-fit">
-
             <span className="text-xs font-bold text-purple-400 uppercase tracking-wider">
               Gameplay Tactics
             </span>
@@ -390,7 +388,6 @@ export default function ToolsPage() {
             </p>
 
             <div className="flex flex-col gap-4 mt-6">
-
               {tacticCategories.map((category) => {
                 const isOpen = openCategory === category.id;
 
@@ -399,10 +396,8 @@ export default function ToolsPage() {
                     key={category.id}
                     className="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden transition-all duration-300"
                   >
-
                     {/* Category Header */}
                     <div className="flex items-center justify-between p-4">
-
                       <h3 className="font-bold text-purple-300">
                         {category.title}
                       </h3>
@@ -413,21 +408,17 @@ export default function ToolsPage() {
                       >
                         {isOpen ? "←" : "Read"}
                       </button>
-
                     </div>
 
                     {/* Expanded Content */}
                     {isOpen && (
                       <div className="border-t border-slate-800 p-4 flex flex-col gap-5">
-
                         {category.tactics.map((tactic, index) => (
                           <div key={tactic.title}>
-
                             <div className="flex items-center gap-2">
                               <span className="text-xs text-purple-400 font-bold">
                                 #{index + 1}
                               </span>
-
                               <h4 className="text-sm font-bold text-white">
                                 {tactic.title}
                               </h4>
@@ -436,23 +427,16 @@ export default function ToolsPage() {
                             <p className="text-xs text-slate-400 mt-2 leading-relaxed">
                               {tactic.text}
                             </p>
-
                           </div>
                         ))}
-
                       </div>
                     )}
-
                   </div>
                 );
               })}
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
   );
