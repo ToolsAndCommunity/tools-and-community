@@ -101,6 +101,170 @@ export default function ToolsPage() {
         },
       ],
     },
+
+    // Added game tactics only
+    {
+      id: "minecraft",
+      title: "⛏️ Minecraft Tactics",
+      tactics: [
+        {
+          title: "Prepare Before Exploring",
+          text: "Carry food, torches, a shield, and spare tools before exploring caves. Mark your route so you can find your way back.",
+        },
+        {
+          title: "Build a Safe Base",
+          text: "Light up the area around your base and secure entrances to reduce hostile mob spawns and surprise attacks.",
+        },
+        {
+          title: "Manage Your Resources",
+          text: "Keep essential materials in your inventory and store valuable items in chests before dangerous expeditions.",
+        },
+      ],
+    },
+    {
+      id: "fortnite",
+      title: "🏆 Fortnite Tactics",
+      tactics: [
+        {
+          title: "Choose Your Landing Spot",
+          text: "Land somewhere that matches your playstyle. Quieter locations give you more time to collect weapons and shields before fighting.",
+        },
+        {
+          title: "Collect Materials Early",
+          text: "Gather building materials when possible and keep useful healing items available before moving into the final zones.",
+        },
+        {
+          title: "Use the Storm to Plan Ahead",
+          text: "Watch the storm timer and map. Rotate early when necessary to avoid being caught outside the safe zone during a fight.",
+        },
+      ],
+    },
+    {
+      id: "gta-6",
+      title: "🚗 GTA 6 Tactics",
+      tactics: [
+        {
+          title: "Plan Your Route",
+          text: "When exploring Leonida, check the map and identify alternate routes before heading toward a destination.",
+        },
+        {
+          title: "Use the Right Vehicle",
+          text: "Choose a vehicle that fits the situation. Handling, speed, and off-road ability can matter more than top speed alone.",
+        },
+        {
+          title: "Explore Carefully",
+          text: "Take time to explore different areas and pay attention to mission objectives rather than rushing through every encounter.",
+        },
+      ],
+    },
+    {
+      id: "call-of-duty",
+      title: "🎖️ Call of Duty Tactics",
+      tactics: [
+        {
+          title: "Control Your Recoil",
+          text: "Learn each weapon's recoil pattern and fire controlled bursts at longer distances to improve accuracy.",
+        },
+        {
+          title: "Use Cover and Positioning",
+          text: "Avoid crossing open areas without a plan. Use cover and reposition after revealing your location.",
+        },
+        {
+          title: "Play the Objective",
+          text: "In objective modes, coordinate with teammates and prioritize the objective instead of chasing every elimination.",
+        },
+      ],
+    },
+    {
+      id: "apex-legends",
+      title: "🚀 Apex Legends Tactics",
+      tactics: [
+        {
+          title: "Stay With Your Squad",
+          text: "Keep a useful distance from teammates so you can support one another without being caught in the same attack.",
+        },
+        {
+          title: "Communicate Enemy Positions",
+          text: "Use pings to share enemy locations, useful equipment, and rotation plans even when voice chat is unavailable.",
+        },
+        {
+          title: "Rotate Before the Ring Closes",
+          text: "Check the ring timer and move toward safe positions early to avoid being forced into difficult fights.",
+        },
+      ],
+    },
+    {
+      id: "marathon",
+      title: "🌌 Marathon Tactics",
+      tactics: [
+        {
+          title: "Know Your Extraction Plan",
+          text: "Before entering a dangerous area, identify possible extraction options and consider how you will leave with your loot.",
+        },
+        {
+          title: "Balance Risk and Rewards",
+          text: "Do not carry more valuable equipment than you are willing to risk. Choose fights based on the loot and situation.",
+        },
+        {
+          title: "Listen for Audio Cues",
+          text: "Pay attention to nearby movement and combat sounds to help judge when to advance, hide, or reposition.",
+        },
+      ],
+    },
+    {
+      id: "persona-4-revival",
+      title: "🎭 Persona 4 Revival Tactics",
+      tactics: [
+        {
+          title: "Watch Enemy Weaknesses",
+          text: "Pay attention to enemy elemental weaknesses and use suitable attacks to create opportunities for follow-up actions.",
+        },
+        {
+          title: "Manage SP Carefully",
+          text: "Avoid spending all your SP on ordinary encounters. Keep enough resources available for tougher enemies and bosses.",
+        },
+        {
+          title: "Prepare Before Major Battles",
+          text: "Review your party setup, equipment, healing items, and available abilities before entering challenging encounters.",
+        },
+      ],
+    },
+    {
+      id: "blood-of-dawnwalker",
+      title: "🌑 The Blood of Dawnwalker Tactics",
+      tactics: [
+        {
+          title: "Study Your Opponents",
+          text: "Observe enemy attack patterns and look for safe opportunities to dodge, block, or counterattack.",
+        },
+        {
+          title: "Manage Your Resources",
+          text: "Use healing items and special abilities thoughtfully, especially when exploring areas with difficult encounters.",
+        },
+        {
+          title: "Explore Before Moving On",
+          text: "Check side paths and nearby locations for useful supplies, optional encounters, and clues before leaving an area.",
+        },
+      ],
+    },
+    {
+      id: "marvel-wolverine",
+      title: "🦾 Marvel's Wolverine Tactics",
+      tactics: [
+        {
+          title: "Keep Moving in Combat",
+          text: "Use movement and dodging to avoid staying surrounded by enemies for too long.",
+        },
+        {
+          title: "Prioritize Dangerous Enemies",
+          text: "Identify opponents who can interrupt your attacks or threaten you from a distance, and deal with them when it is safe.",
+        },
+        {
+          title: "Learn Combat Timing",
+          text: "Watch enemy animations and practice the timing of dodges, counters, and attacks instead of button-mashing.",
+        },
+      ],
+    },
   ];
 
   const [openCategory, setOpenCategory] = useState<string | null>(null);

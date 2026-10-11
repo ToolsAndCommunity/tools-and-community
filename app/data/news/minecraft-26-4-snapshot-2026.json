@@ -1,0 +1,31 @@
+{
+  "category": "popular",
+  "title": "Minecraft 26.4 Snapshot Adds Ice Caves, Glowing Crystals and a New Frozen Zombie",
+  "date": "2026-10-06",
+  "tag": "New Minecraft Update",
+  "image": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/26_4_snapshot_3%201170x500.jpg",
+  "summary": "Minecraft Java Edition Snapshot 3 introduces a new Ice Caves biome, glowing ice crystals, dangerous icicles and Frostbite, a new hostile mob that can freeze players.",
+  "content": "Minecraft has revealed new features in Java Edition Snapshot 3 for version 26.4, giving players an early look at a colder and more dangerous underground world. The snapshot introduces a new Ice Caves biome, glowing crystals, icicles and a hostile frozen zombie variant called Frostbite.\n\nThe new Ice Caves biome can generate beneath colder regions of the Overworld. These caves mainly contain Packed Ice and Calcite, with icicles hanging from ceilings and occasional patches of snow on the ground. Players can also discover ores embedded in stone and deepslate inside these frozen environments.\n\nIce Crystals are another addition to the update. These crystal-like blocks emit light and can be placed in different directions, making them useful for exploration and creative building. Icicles can grow naturally up to five blocks long when pointing downward, and falling icicles can damage entities below them.\n\nThe update also introduces Frostbite, a new hostile zombie variant adapted to icy environments. Frostbites can attack at close range or throw Ice Balls from a distance. Their melee attacks apply the Freezing effect, which gradually freezes affected players and can eventually cause damage. Leather armor provides protection against freezing, similar to its protection from Powder Snow.\n\nAlongside the new cave content, Snapshot 3 improves the Friends interface with refreshed design, search and sorting options. The Social Interactions screen has also been replaced by a new Other Players screen, making multiplayer interactions easier to manage.\n\nMinecraft snapshots are experimental Java Edition builds, so features may change before a full release. Players should back up their worlds before testing snapshots and check the official Minecraft website for the latest changes.",
+  "faq": [
+    {
+      "question": "What is new in Minecraft 26.4 Snapshot 3?",
+      "answer": "The snapshot adds Ice Caves, Ice Crystals, Icicles, the Frostbite mob, the Freezing effect and Ice Balls."
+    },
+    {
+      "question": "What is the Frostbite mob?",
+      "answer": "Frostbite is a hostile zombie variant that can throw Ice Balls and apply the Freezing effect with melee attacks."
+    },
+    {
+      "question": "Where can players find Ice Caves?",
+      "answer": "Ice Caves can generate beneath colder biomes in the Overworld."
+    },
+    {
+      "question": "Can icicles damage players?",
+      "answer": "Yes. Falling icicles can damage entities, and landing on pointed icicles can deal additional damage."
+    },
+    {
+      "question": "Is Minecraft 26.4 Snapshot 3 a full release?",
+      "answer": "No. It is an experimental Java Edition snapshot, and its features may change before a stable release."
+    }
+  ]
+}
